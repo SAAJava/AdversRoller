@@ -14,15 +14,19 @@ public class App extends JFrame{
         JLabel result = new JLabel("Результат");
         JLabel sila1 = new JLabel("ПАРАМЕТР");
         JLabel Navik1 = new JLabel("НАВЫК");
+        JLabel equals = new JLabel("=");
+        JLabel equals1 = new JLabel("=");
         JTextField Param = new JTextField("Параметр");
         JTextField Navik = new JTextField("Навык");
         JButton add = new JButton("+");
+        JTextField ParamName = new JTextField("ПАРАМЕТР");
+        JTextField NavikName = new JTextField("НАВЫК");
         ActionListener listeneradd = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
-        }
+        };
         ActionListener listenerroll1 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,15 +40,20 @@ public class App extends JFrame{
             }
         };
         roll1.addActionListener(listenerroll1);
-        panel.setSize(new Dimension(500,250));
+        panel.setSize(new Dimension(900,250));
         add(panel);
         panel.add(sila1);
+        panel.add(ParamName);
+        panel.add(equals1);
         panel.add(Param);
         panel.add(Navik1);
+        panel.add(NavikName);
+        panel.add(equals);
         panel.add(Navik);
         panel.add(roll1);
         panel.add(result);
-        setPreferredSize(new Dimension(600, 300));
+        panel.add(add);
+        setPreferredSize(new Dimension(900, 900));
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
